@@ -14,3 +14,6 @@ echo is gcc installed
 gcc --version
 echo
 env
+
+echo
+echo qtdiag
