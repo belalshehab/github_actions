@@ -27,6 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: qtdiag
+        run: |
+          sudo apt install build-essential
+          sudo apt install qtcreator
+          sudo apt install qt5-default
 
      
