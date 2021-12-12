@@ -33,11 +33,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: step 3 - qt install
         run: |
-          sudo apt install build-essential
-          sudo apt install qtcreator
-          sudo apt install qt5-default
-          
-          
+          sudo apt update
+          sudo apt install build-essential qtcreator qt5-default -y
+        
+    
       - name: Step 4 - Log the prebuild disc space
         run: df -h
 
