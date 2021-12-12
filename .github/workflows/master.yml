@@ -22,14 +22,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Step 1 - Log the prebuild disc space
+      - run: df -h
+      
+      - name : step 2 - checkout the master branc
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: step 3 - Run a one-line script
         run: |
-          sudo apt install build-essential
-          sudo apt install qtcreator
-          sudo apt install qt5-default
+          apt install build-essential
+          apt install qtcreator
+          apt install qt5-default
+          
+      - name: Step 4 - Log the prebuild disc space
+      - run: df -h
 
      
