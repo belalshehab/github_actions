@@ -29,15 +29,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      # Runs a single command using the runners shell
-      - name: step 3 - qt install
-        run: |
-          sudo apt update
-          sudo apt install build-essential qtcreator qt5-default -y
+      - name : Step 3 - system update and upgrade
+        run : sudo apt update && sudo apt upgrade
         
-    
-      - name: Step 4 - Log the prebuild disc space
+      - name: step 4 - qt install
+        run: sudo apt install build-essential qtcreator qt5-default -y
+        
+      - name: Step 5 - Log the prebuild disc space
         run: df -h
 
      
