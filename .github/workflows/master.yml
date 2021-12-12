@@ -34,6 +34,9 @@ jobs:
       - name: step 3 - qt install
         run: |
           sudo apt install build-essential
+          sudo apt install qtcreator
+          sudo apt install qt5-default
+          
           
       - name: Step 4 - Log the prebuild disc space
         run: df -h
