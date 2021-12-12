@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Step 1 - Log the prebuild disc space
-      - run: df
+        run: df
       
       - name : step 2 - checkout the master branc
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -35,6 +35,6 @@ jobs:
           echo Test
           
       - name: Step 4 - Log the prebuild disc space
-      - run: df
+        run: df
 
      
